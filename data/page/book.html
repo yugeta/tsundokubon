@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="data/page/css/book.css?<<GLOBALS:config/default/version>>">
+<!-- <h2><<REQUEST:file>></h2> -->
+
+<<METHOD:BOOK_COMMON::setBookFile(<<REQUEST:dir>>,<<REQUEST:file>>)>>
+<<METHOD:BOOK_COMMON::delBookCache(<<REQUEST:dir>>,<<REQUEST:file>>)>>
+<<METHOD:BOOK::viewBook_log(<<REQUEST:dir>>,<<REQUEST:file>>,<<REQUEST:num>>)>>
+
+<div class="page-img">
+<<METHOD:BOOK::viewBook(<<REQUEST:dir>>,<<REQUEST:file>>,<<REQUEST:num>>)>>
+</div>
+
+<div class="page-info" style="display:none;">
+- <<METHOD:BOOK::getBookPageNumber(<<REQUEST:dir>>,<<REQUEST:file>>,<<REQUEST:num>>)>> -
+</div>
+
+
+<!-- <div>
+<-<METHOD:BOOK::getPagenumberLastBookView(<<REQUEST:dir>>,<<REQUEST:file>>)>->
+</div> -->
+
+<script src="data/page/js/book.js?<<GLOBALS:config/default/version>>"></script>
+
+<div class="book-comment">
+<textarea></textarea>
+<button>登録</button>
+</div>

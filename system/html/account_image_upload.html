@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<style type='text/css'>
+			head,body{
+				margin:0;
+				padding:0;
+				border:0;
+				overflow:hidden;
+				text-align:center;
+			}
+			input[type='file']{
+				width:100%;
+				padding:0;
+				/*height:100%;*/
+			}
+			input[type='button']{
+				width:70%;
+				height:30px;
+				-webkit-appearance:button;
+				margin:4px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<form name='form1' method='post' action='<!--%class:URL:getUrl%-->' enctype='multipart/form-data'>
+			<input type='hidden' name='page' value='account'>
+			<input type='hidden' name='action' value='image_upload'>
+			<input type='hidden' name='uid' value='<!--%request:uid%-->'>
+
+			<input type='file' name='file1' onchange='image_submit()' style='display:none;'>
+			<input type='button' value='+ 画像を登録する' onclick='document.form1.file1.click()'>
+		</form>
+		<form name='form2' method='post' action='<!--%class:URL:getUrl%-->'>
+			<input type='hidden' name='page' value='account'>
+			<input type='hidden' name='action' value='image_delete'>
+			<input type='hidden' name='uid' value='<!--%request:uid%-->'>
+
+			<input type='button' value='- 画像を削除する' onclick='image_delete()'>
+		</form>
+
+<script type='text/javascript'>
+	//iframeの取得
+	var parent_iframe = parent.document.getElementById("account_upload");
+	if(parent_iframe!=null){
+
+		var img_file = "<!--%class:ACCOUNT:getImageFilename(<!--#request:uid#-->)%-->";
+
+		//画像をセット
+		var account_image = parent.document.getElementById("account_image");
+		if(account_image!=null && img_file){
+			account_image.innerHTML = "<img class='account_image' src='"+img_file+"?"+(+new Date())+"'>";
+		}
+
+	}
+
+	function image_delete(){
+
+		if(!confirm("この作業は取り消しができません。\n削除してもよろしいですか？")){return}
+
+		//画像をデフォルトにする。
+		var account_image = parent.document.getElementById("account_image");
+		if(account_image!=null){
+			account_image.innerHTML = "<div class='account_image_default'><i class='glyphicon glyphicon-user'></i></div>";
+		}
+
+		document.form2.submit();
+	}
+
+	function image_submit(){
+
+		var fm = document.form1;
+		//console.log(fm.file1.value);
+
+		if(!fm.file1.value){return}
+
+		var file_names = fm.file1.value.split(".");
+		//alert(file_names[file_names.length-1]);
+		if(file_names[file_names.length-1]!="jpg"){
+			alert("jpg拡張子以外は使えません。\n"+fm.file1.value);
+			return;
+		}
+
+		fm.submit();
+	}
+</script>
+
+
+	</body>
+</html>

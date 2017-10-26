@@ -1,0 +1,123 @@
+
+<script type="text/javascript" src="system/js/accountEdit.js?<<METHOD:MYNT::currentTime()>>"></script>
+
+<div class='container'>
+	<div class='row'>
+		<div class='base-default base-color-green'>
+			<h1><i class='glyphicon glyphicon-user'></i> Account Setting</h1>
+		</div>
+	</div>
+</div>
+
+<!-- <div class='container'>
+	<div class='row'>
+		<div class='base-default base-color-gray'>
+			<div class='account_image' id='account_image'>
+			</div>
+			<iframe id='img_upload_iframe'></iframe>
+			<button id="button_upload" type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Image File Upload
+			</button>
+		</div>
+	</div>
+</div> -->
+
+<div class='container'>
+	<div class='row'>
+		<div class='base-default base-color-gray'>
+
+			<form name='form1' method='post' class="form-horizontal">
+				<input type='hidden' name='p' value='<<request:p>>' />
+				<input type='hidden' name='c' value='USER_REGIST' />
+				<input type='hidden' name='f' value='user_update' />
+				<input type='hidden' name='data[auth]' value='<<class:ACCOUNT:getAccountInfo("auth")>>' />
+				<input type='hidden' name='data[service]' value='<<class:Account:getAccountInfo("service")>>' />
+
+				<!--
+				<input type='hidden' name='data[img]' value='<-<class:ACCOUNT:getAccountInfo("img")>->' class='form-control' placeholder='Image'/>
+				-->
+
+				<div class="control-group error">
+					<label class="control-label" for="data[id]">Account-ID</label>
+					<div class="controls">
+						<!--<input type="text" id="name" class="form-control" placeholder="your name">-->
+						<input type='text' id='data[id]' name='data[id]' value='<<class:ACCOUNT:getAccountInfo("id")>>' class='form-control' placeholder='* Account ID' readonly/>
+					</div>
+				</div>
+
+				<!-- <div class="control-group error">
+					<label class="control-label" for="data[pw]">Password</label>
+					<div class="controls">
+						<input type='password' id='data[pw]' name='data[pw]' class='form-control' placeholder='* Password'/>
+					</div>
+				</div>
+
+				<div class="control-group error">
+					<label class="control-label" for="data[pw]"></label>
+					<div class="controls">
+						<input type='password' id='data[pw_snd]' name='data[pw_snd]' class='form-control' placeholder='* Password retype'/>
+					</div>
+				</div> -->
+
+				<div class="control-group error">
+					<label class="control-label" for="data[nm]">Name</label>
+					<div class="controls">
+						<input type='text' id='data[nm]' name='data[nm]' value='<<class:ACCOUNT:getAccountInfo("nm")>>' class='form-control' placeholder='* Name'/>
+					</div>
+				</div>
+
+				<div class="control-group error">
+					<label class="control-label" for="data[mail]">Email</label>
+					<div class="controls">
+						<input type='text' id='data[mail]' name='data[mail]' value='<<class:ACCOUNT:getAccountInfo("mail")>>' class='form-control' placeholder='* Email'/>
+					</div>
+				</div>
+
+				<div class="control-group warning">
+					<div class="control-label"></div>
+					<div class="controls">
+						<input type='submit' value='Update' class='btn btn-default' />
+					</div>
+				</div>
+				<!--
+				<h4>No.</h4>
+				<input type='text' value='<<session:no>>' class='form-control' readonly/>
+				<h4>ID</h4>
+				<input type='text' name='data[id]' value='<<class:ACCOUNT:getAccountInfo("id")>>' class='form-control' placeholder='ID' readonly/>
+				<h4>Password</h4>
+				<input type='password' name='data[pw]' value='<<class:ACCOUNT:getAccountInfo("pw")>>' class='form-control' placeholder='Password'/>
+				<h4>Name</h4>
+				<input type='text' name='data[nm]' value='<<class:ACCOUNT:getAccountInfo("nm")>>' class='form-control' placeholder='Name'/>
+				<h4>Email</h4>
+				<input type='text' name='data[mail]' value='<<class:ACCOUNT:getAccountInfo("mail")>>' class='form-control' placeholder='eMail'/>
+
+				<br>
+				<div class='input_line'><input type='submit' value='Update' class='btn btn-default' /></div>
+				-->
+			</form>
+
+		</div>
+	</div>
+
+	<!-- <div class='row'>
+		<div class='base-default base-color-gray' style='text-align:center;min-height:100px;padding:16px;'>
+			<form name='form2' method='post' class="form-horizontal">
+				<input type='hidden' name='s' value='<<request:s>>' />
+				<input type='hidden' name='c' value='USER_REGIST' />
+				<input type='hidden' name='f' value='user_delete' />
+				<input type='hidden' name='data[id]' value='<<class:ACCOUNT:getAccountInfo("id")>>' />
+				<input type='button' value='Account-Remove' class='btn btn-default' onclick='form2_click()' />
+			</form>
+		</div>
+	</div> -->
+
+</div>
+
+<!-- <script type='text/javascript'>
+	function form2_click(){
+		if(!confirm("このアカウント情報を削除します。\n※この操作は取り消せません。")){return}
+
+		document.form2.submit();
+
+	}
+</script> -->

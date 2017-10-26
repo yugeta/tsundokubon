@@ -1,0 +1,9 @@
+<<if:"<<SESSION:login_id>>">>
+<li class="nav-item">
+  <a href="?p=logout" class="nav-link">Logout</a>
+</li>
+<<else>>
+<li class="nav-item">
+  <a href="?p=login" class="nav-link">Login</a>
+</li>
+<</if>>

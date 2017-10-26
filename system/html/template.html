@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+		<title><<METHOD:MYNT_PAGE::getTitle()>></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="system/css/mynt_system.css?<<METHOD:MYNT::currentTime()>>">
+		<link rel="stylesheet" href="system/css/head_menu.css?<<METHOD:MYNT::currentTime()>>">
+		<link rel="stylesheet" href="system/css/common.css?<<METHOD:MYNT::currentTime()>>">
+		<link rel="stylesheet" href="system/css/login.css?<<METHOD:MYNT::currentTime()>>">
+		<link rel="stylesheet" href="system/design/bootstrap-3.3.7-dist/css/bootstrap.css">
+		<link rel="stylesheet" href="system/design/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="system/design/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+		<script src="system/design/jquery/jquery-1.11.3.min.js"></script>
+		<script src="system/design/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<script src="system/js/common.js?<<METHOD:MYNT::currentTime()>>"></script>
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" >
+      <div class="container">
+
+				<div class="navbar-header">
+					<a href="<<METHOD:MYNT_URL::getUrl()>>" class="navbar-brand"><<GLOBALS:config/default/title>></a>
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar-main">
+
+<<IF:"<<SESSION:login_id>>">>
+
+					<ul class="nav navbar-nav page-menu">
+
+						<!-- <li>
+							<a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=picture"><i class='glyphicon glyphicon-picture'></i> Picture</a>
+						</li> -->
+
+						<!-- <li>
+							<a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=pageEdit&type=blog"><i class='glyphicon glyphicon-pencil'></i> NewPost</a>
+						</li> -->
+
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="download">Page <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=blogLists"><i class='glyphicon glyphicon-edit'></i> BlogLists</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=pageLists"><i class='glyphicon glyphicon-list-alt'></i> PageLists</a></li>
+
+							</ul>
+						</li>
+
+            <li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="download">Tools <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=picture"><i class='glyphicon glyphicon-picture'></i> Picture</a></li>
+                <li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=group"><i class='glyphicon glyphicon-menu-hamburger'></i> Group</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=tag"><i class='glyphicon glyphicon-tags'></i> Tag</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=category"><i class='glyphicon glyphicon-duplicate'></i> Category</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=comment"><i class='glyphicon glyphicon-comment'></i> Comment</a></li>
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="download">System <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="download">
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=config"><i class='glyphicon glyphicon-cog'></i> Config</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=plugin"><i class='glyphicon glyphicon-import'></i> Plugin</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=design"><i class='glyphicon glyphicon-modal-window'></i> Design</a></li>
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=moduleEdit"><i class='glyphicon glyphicon-edit'></i> Module-Edit</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right page-menu">
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" id="download">Account <span class="caret"></span></a>
+							<ul class="dropdown-menu" aria-labelledby="download">
+								<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=accountEdit"><i class='glyphicon glyphicon-user'></i> Setting</a></li>
+								<li class="divider"></li>
+								<li><a href="javascript:void(0)" onclick="if(confirm('Are you sure you want to log out?')){location.href='<<METHOD:MYNT_URL::getLocalFilename()>>?p=logout'}"><i class='glyphicon glyphicon-log-out'></i> Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+
+<<else>>
+
+					<ul class="nav navbar-nav navbar-right page-menu">
+						<li><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=login"><i class='glyphicon glyphicon-log-in'></i> Login</a></li>
+					</ul>
+<</IF>>
+
+
+				</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="container">
+			<article class="contents">
+				<div class="eyecatch"></div>
+<<METHOD:MYNT::viewContents_system("system/html/")>>
+			</atricle>
+    </div>
+
+	</body>
+</html>

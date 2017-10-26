@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="plugin/login/css/login.css?<<METHOD:MYNT::currentTime()>>">
+
+<<IF:isset($_REQUEST["err"]) && $_REQUEST["err"]!=="">>
+		<div class="error">
+			<div class="error-box">
+				Login ERROR !!<br>
+				ID and Password please check again.
+			</div>
+		</div>
+<</IF>>
+
+<form method="post">
+	<input type="hidden" name="method" value="MYNT_PLUGIN_LOGIN/checkLogin">
+	<input type="hidden" name="url" value="./">
+	<div class="login">
+		<div class="input-area">
+			<div class="input-group">
+				<span class="input-group-addon">ID</span>
+				<input class="form-control" type="text" name="login_id" value="<<REQUEST:login_id>>" autocomplete="off">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">Password</span>
+				<input class="form-control" type="password" name="login_pw" value="<<REQUEST:login_pw>>" autocomplete="off">
+			</div>
+			<div class="login-submit">
+				<input type="submit" class="btn" value="Login" />
+				<!-- <button class="btn btn-default"><span>Login</span></button> -->
+			</div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,7 @@
+[
+	{"key":"release", "value":"公開"},
+	{"key":"wait"   , "value" :"承認待ち"},
+	{"key":"draft"  , "value":"作成中"},
+	{"key":"denial" , "value" :"否認"},
+	{"key":"trash"  , "value" :"削除"}
+]

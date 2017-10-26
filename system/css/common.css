@@ -1,0 +1,35 @@
+html,body{
+	height:100%;
+}
+body {
+    padding-top: 50px;
+}
+
+/*search*/
+.header-search{
+  padding: 8px;
+  width:240px;
+}
+
+/*menu*/
+.mynt-menu{
+	margin:4px;
+	padding:8px;
+	border:1px solid #CCC;
+	text-align:center;
+}
+.group-lists{
+	text-align:left;
+}
+.group-lists p{
+	margin:4px 8px;
+	padding:0;
+}
+
+.table-scroll{
+	overflow:auto;
+}
+.table-scroll td,
+.table-scroll th{
+  white-space:nowrap;
+}

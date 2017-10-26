@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="system/css/moduleEdit.css?<<method:MYNT::currentTime()>>" />
+<h1><a href="<<method:MYNT_URL::getUrl()>>?p=<<request:p>>">ModuleEdit</a></h1>
+
+
+
+<div class='container'>
+  <div class="row">
+
+    <div class="col-sm-3">
+      <div id="module_menu" class="module-menu">
+<<method:MYNT_MODULE_EDIT::viewMenu()>>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+
+      <form method="POST" class="file_exist">
+        <input type='hidden' name='method' value='MYNT_MODULE_EDIT/setDataUpload' />
+
+        <div class="row path-value">
+					Path:
+          <input class="form-control" type="text" name="target" value="<<REQUEST:path>>" />
+        </div>
+
+        <div class="row">
+					Source:
+          <textarea class="form-control source" name="source"><<method:MYNT_MODULE_EDIT::getSource(<<REQUEST:path>>)>></textarea>
+        </div>
+
+        <div class="row">
+          <hr>
+          <input type='submit' value='Update' class='btn btn-default' />
+        </div>
+
+        <div class="row remove_area_str">
+          <hr>
+          <!-- <p onclick="document.getElementById('remove_area').style.setProperty('display','block','')">ファイルを削除する場合にクリックしてください。</p> -->
+          <div id="remove_area" class="input-group">
+            <!-- <input type='button' value='Remove' class='btn btn-default submit-remove' id="remove" /> -->
+            <!-- <span class="input-group-addon"> -->
+            <label>
+              <input class="" type='checkbox' name="file_remove" value='Remove' class='btn btn-default submit-remove' id="remove" area-label="" />
+              チェックして保存するとファイルが削除されます。
+            </label>
+            <!-- </span> -->
+          </div>
+        </div>
+
+
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="system/js/moduleEdit.js?<<method:MYNT::currentTime()>>"></script>

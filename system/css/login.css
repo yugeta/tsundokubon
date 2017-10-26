@@ -1,0 +1,84 @@
+.login{
+	max-width:300px;
+	width:300px;
+	margin:20px auto;
+	padding:0px;
+	border-radius:4px;
+	/*border:1px solid #CCC;*/
+
+}
+.login .title{
+	margin:0;
+	background-color:#EEE;
+	/*color:#048;*/
+	/*font-weight:bold;*/
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #CCC;
+}
+.login .input-group{
+	margin-bottom:30px;
+}
+.login .input-area{
+	padding:30px 10px;
+	text-align:center;
+}
+
+.input-group-addon{
+	width:100px;
+}
+
+
+.login .inputs{
+	margin:0;
+	padding:12px 8px;
+}
+.login .inputs div{
+	height:40px;
+	line-height:40px;
+}
+.login .inputs .name{
+	display:inline-block;
+	width:40px;
+	text-align:center;
+}
+.login .inputs .input{
+	display:inline-block;
+	width:240px;
+}
+.login .inputs .submit{
+	height:30px;
+	line-height:30px;
+	display:block;
+	padding:0 20px;
+	text-align:right;
+}
+.login .login-submit{
+	text-align:left;
+}
+.login .login-submit button{
+	width:272px;
+}
+.user_add{
+	height:20px;
+	margin:20px;
+	text-align:center;
+	line-height:20px;
+}
+
+
+
+.error{
+  text-align:center;
+  margin:20px auto 0 auto;
+}
+.error .error-box{
+  display:inline-block;
+  padding:20px;
+  border:2px double red;
+  color:red;
+  font-weight:bold;
+  text-align:left;
+	margin:0;
+}

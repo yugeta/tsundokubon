@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="system/css/group.css?<<method:MYNT::currentTime()>>" />
+<h1>Groups</h1>
+
+<form method="POST">
+  <!-- <input type='hidden' name='method' value='MYNT_GROUP/addGroupList' /> -->
+  <input type='hidden' name='method' value='MYNT_GROUP/setUpdate' />
+  <input type="hidden" name="target" value="plugin" />
+  <input type="hidden" name="plugin[cache]" value="" />
+
+  <div class='container'>
+    <div class="row">
+        <table class="groups" id="groups">
+          <tr class="header"><th>#</th><th>Name</th><th>Count</th><th>Remove</th></tr>
+          <<method:MYNT_GROUP::viewGroupTableRows()>>
+
+          <tr class="add"><th>Add</th><td colspan="3" style="text-align:center;"><input id="addButton" type='button' value='+' class='btn btn-default' /></td></tr>
+        </table>
+    </div>
+  </div>
+
+
+  <hr>
+  <div class='container'>
+    <div class="row control-group">
+      <input type='submit' value='Update' class='btn btn-default' />
+    </div>
+  </div>
+</form>
+
+<script src="system/js/group.js"></script>

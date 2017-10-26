@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="system/css/pageLists.css?<<METHOD:MYNT::currentTime()>>">
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='base-default base-color-green'>
+				<h1><i class='glyphicon glyphicon-list'></i> Page Lists</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<ul class="nav nav-tabs">
+
+	<li role="presentation" class="<<if:'<<request:status>>'===''>>active<</if>>">
+		<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="<<METHOD:MYNT_URL::getUrl()>>?p=<<request:p>>">ALL (<<METHOD:MYNT_PAGE_LIST::getPageCount(<<request:type>>,"")>>)</a>
+	</li>
+
+	<<METHOD:MYNT_PAGE_LIST::getPageCategoryLists_li("status")>>
+
+	<li role="presentation" class="<<if:'<<request:status>>'==='unregist'>>active<</if>>">
+		<a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" href="<<METHOD:MYNT_URL::getUrl()>>?p=<<request:p>>&status=unregist">未登録 (<<METHOD:MYNT_PAGE_LIST::getPageCount("unregist")>>)</a>
+	</li>
+</ul>
+
+
+<div class='container'>
+	<div class='row'>
+		<div class="table-scroll">
+			<table class="table">
+				<thead class="thead-inverse">
+					<tr>
+						<th>#</th>
+						<th>Title</th>
+						<th>Status</th>
+						<th>LastUpdate</th>
+						<th>ReleaseDay</th>
+					</tr>
+				</thead>
+				<tbody>
+<<METHOD:MYNT_PAGE_LIST::viewPageLists_tr(<<request:status>>)>>
+				</tbody>
+			</table>
+		</dev>
+	</div>
+</div>
+
+<div class='container'>
+	<div class='row'>
+		<p><a href="<<METHOD:MYNT_URL::getLocalFilename()>>?p=pageEdit" class="btn btn-primary btn-lg" role="button">+ Add Page</a></p>
+	</div>
+</div>

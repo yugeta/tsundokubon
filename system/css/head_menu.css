@@ -1,0 +1,24 @@
+.navbar-fixed-top{
+	background-image:linear-gradient(to bottom, #AAA 0%, #444 100%) !important;
+
+}
+.navbar-fixed-top *{
+	color:white !important;
+}
+.page-menu .dropdown-menu{
+	background-color:#444 !important;
+}
+.page-menu .dropdown-menu>li>a{
+	cursor:pointer;
+}
+.page-menu .dropdown-menu>li>a:hover{
+	/*background-color:#F44 !important;*/
+	background-image: linear-gradient(to bottom, #999 0%, #888 100%) !important;
+}
+.navbar-toggle .icon-bar{
+	background-color:white !important;
+}
+.page-menu .dropdown.open .dropdown-toggle{
+	/*background-color:red !important;*/
+	background-image: linear-gradient(to bottom, #999 0%, #888 100%) !important;
+}

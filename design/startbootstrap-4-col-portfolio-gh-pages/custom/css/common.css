@@ -1,0 +1,44 @@
+html body{
+  margin-bottom:0px !important;
+}
+main{
+  min-height:400px;
+}
+main .content-wrapper{
+  padding:4px 20px;
+}
+
+.m-0{
+  width:100%;
+}
+footer.sticky-footer{
+  height: 120px !important;
+  line-height:60px !important;
+}
+.footer-nav{
+  margin:0 !important;
+}
+
+.content-wrapper .dir-in a{
+  display:inline-block;
+  line-height:30px;
+  font-size:14px;
+  border:1px solid #007bff;
+  margin:4px;
+  padding:4px;
+  text-decoration:none;
+  border-radius:6px;
+}
+.content-wrapper .dir-in a:hover{
+  background-color:#EEF;
+}
+
+.content-wrapper div.pankuzu{
+  line-height:40px;
+  font-weight:bold;
+  padding:8px;
+}
+
+i.red{
+  color:red;
+}

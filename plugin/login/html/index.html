@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <<FILE:"data/page/english/head_tag.html">>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class='row'>
+					<<FILE:"data/page/english/header_menu.html">>
+				</div>
+			</div>
+		</div>
+
+    <div class="container">
+      <link rel="stylesheet" href="plugin/login/css/login.css?<<METHOD:MYNT::currentTime()>>">
+
+      <<IF:isset($_REQUEST["err"]) && $_REQUEST["err"]!=="">>
+      		<div class="error">
+      			<div class="error-box">
+      				Login ERROR !!<br>
+      				ID and Password please check again.
+      			</div>
+      		</div>
+      <</IF>>
+
+      <main class="bs-docs-masthead" role="main">
+      	<form method="post" action="<<METHOD:MYNT_URL::getLocalFilename()>>">
+      		<input type="hidden" name="method" value="MYNT_PLUGIN_LOGIN/checkLogin">
+      		<input type="hidden" name="system" value="top">
+      		<div class="login">
+      			<div class="input-area">
+      				<div class="input-group">
+      					<span class="input-group-addon">ID</span>
+      					<input class="form-control" type="text" name="login_id" value="<<REQUEST:login_id>>" autocomplete="off">
+      				</div>
+      				<div class="input-group">
+      					<span class="input-group-addon">Password</span>
+      					<input class="form-control" type="password" name="login_pw" value="<<REQUEST:login_pw>>" autocomplete="off">
+      				</div>
+      				<div class="login-submit">
+      					<button class="btn btn-default"><span>Login</span></button>
+      				</div>
+      				<!-- <div class="user_add">
+      					<a href="<<METHOD:MYNT_URL::getDir()>>?plugin=login&html=account_add">新規登録</a>
+      				</div> -->
+      			</div>
+      		</div>
+      	</form>
+      </main>
+    </div>
+
+
+
+	</body>
+</html>

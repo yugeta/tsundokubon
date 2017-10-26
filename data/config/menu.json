@@ -1,0 +1,37 @@
+{
+	"nav":{
+		"lists":[
+			{"file":"data/page/menu_up.html"},
+			{"link":"?p=blog_lists", "text":"Blog"},
+			{"link":"?p=book_lists", "text":"Lists"},
+			{"link":"?p=recent", "text":"Recent"},
+			{"file":"data/page/menu_login.html"}
+		],
+		"activeString":"active",
+		"className_ul":"navbar-nav ml-auto",
+		"className_li":"nav-item",
+		"className_a":"nav-link js-scroll-trigger"
+	},
+
+	"footer":{
+		"lists":[
+			{"link":"?p=shoho", "text":"特定商取引法"},
+			{"link":"?p=policy", "text":"PrivacyPolicy"},
+			{"link":"?p=kiyaku", "text":"利用規約"},
+			{"link":"?p=contact", "text":"Contact"}
+		],
+		"activeString":"active",
+		"className_ul":"footer-nav",
+		"className_li":"",
+		"className_a":""
+	},
+	"sideMenu":{
+		"lists":[
+
+		],
+		"activeString":"active",
+		"className_ul":"",
+		"className_li":"",
+		"className_a":""
+	}
+}

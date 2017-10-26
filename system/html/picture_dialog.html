@@ -1,0 +1,32 @@
+
+<div class="ImageDialog-base">
+
+	<h2 class="ImageDialog-title"><<request:fileName>></h2>
+
+	<div class="prop_img">
+		<img class="ImageDialog-img" src="<<request:img_src>>" />
+	</div>
+
+	<div class="prop_info">
+		<div>Filename : <<request:fileName>></div>
+		<div>Entry : <<request:entry>></div>
+		<div>Extension : <<request:extension>></div>
+		<div>Size : <<request:size>></div>
+		<div>AccessIP : <<request:accessIP>></div>
+		<div>Alt : <input type="text" name="img_alt" value=""></div>
+		<div>Comment : <input type="text" name="img_comment" value=""></div>
+
+		<button type="button" class="btn btn-default" id="ImageDialog_update">
+			<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Update
+		</button>
+	</div>
+
+	<hr>
+
+	<button type="button" class="btn btn-default" id="ImageDialog_remove">
+		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove
+	</button>
+
+
+
+</div>

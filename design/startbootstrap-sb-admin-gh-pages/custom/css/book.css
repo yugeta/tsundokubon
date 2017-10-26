@@ -1,0 +1,60 @@
+img.view-page{
+  max-width:100%;
+  max-height:90%;
+}
+
+div.book-btn{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  position:fixed;
+  display:block;
+  width:50px;
+  height:50px;
+  background-color:black;
+  opacity:0.6;
+  border-radius:25px;
+  text-align:center;
+  vertical-align:middle;
+  line-height:45px;
+  font-size:50px;
+  font-weight:bold;
+  color:white;
+  cursor:pointer;
+  padding:0;
+  margin:0;
+  border:0;
+}
+
+div.book-btn-right{
+  right:0px;
+  top:200px;
+}
+div.book-btn-right:before{
+  content:">";
+}
+div.book-btn-right:hover{
+  opacity:0.3;
+}
+
+div.book-btn-left{
+  left:0px;
+  top:200px;
+}
+div.book-btn-left:before{
+  content:"<";
+}
+div.book-btn-left:hover{
+  opacity:0.3;
+}
+
+.content-wrapper{
+  height:100%;
+  overflow:hidden;
+  text-align:center;
+  /*position:relative;*/
+}
+img.view-page{
+  box-shadow:4px 4px 16px rgba(0,0,0,0.5);
+}
+.page-info{
+  line-height:40px;
+}

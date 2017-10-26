@@ -1,0 +1,47 @@
+
+<div class='base-default base-color-green'>
+	<h1>
+		<i class='glyphicon glyphicon-user'></i>
+		Account Regist
+	</h1>
+</div>
+
+<div class='base-default base-color-gray'>
+	<form name='form1' method='post' class="form-horizontal">
+		<input type='hidden' name='plugin' value='<<REQUEST:plugin>>' />
+		<input type='hidden' name='method' value='MYNT_PLUGIN_LOGIN/setAccountAdd' />
+		<input type='hidden' name='mode' value='account_add' />
+
+		<div class="">
+			<label class="control-label" for="account_id">E-Mail</label>
+			<div class="controls">
+				<input type='text' id='account_id' name='account_id' value='' class='form-control' placeholder='* Account ID (E-Mail address)' />
+			</div>
+		</div>
+
+		<div class="">
+			<label class="control-label" for="account_pw">Password</label>
+			<div class="controls">
+				<input type='password' id='account_pw' name='account_pw' class='form-control' placeholder='* Password'/>
+			</div>
+		</div>
+
+		&nbsp;
+		<div><input type='submit' value='Regist' class='btn btn-default' /></div>
+	</form>
+</div>
+
+
+<!-- <div class='row'> -->
+<!-- <div class='base-default base-color-gray' style='text-align:center;min-height:100px;padding:16px;'>
+	<form name='form2' method='post' class="form-horizontal">
+		<input type='hidden' name='s' value='' />
+		<input type='hidden' name='c' value='USER_REGIST' />
+		<input type='hidden' name='f' value='user_delete' />
+		<input type='hidden' name='data[id]' value='' />
+
+		<input type='button' value='Account-Remove' class='btn btn-default' onclick='form2_click()' />
+	</form>
+</div> -->
+<!-- </div>
+</div> -->

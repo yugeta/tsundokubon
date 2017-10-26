@@ -1,0 +1,9 @@
+{
+	"version":"0.0.3",
+	"flg":"",
+	"id":"pageAxcel",
+	"class":"MYNT_PLUGIN_pageAxcel",
+	"name":"Web page axcelerator",
+	"explane":"Axcelerator is target-tag(id=contents) only",
+	"comment":"ajax to id=contents replace innerHTML (same domain)"
+}

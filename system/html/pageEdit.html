@@ -1,0 +1,195 @@
+<link rel="stylesheet" href="system/css/pageEdit.css?<<METHOD:MYNT::currentTime()>>">
+
+<div class='container'>
+
+	<div class='row'>
+		<div class='col-sm-12'>
+			<p style="font-size:20px;margin:0;"><a href='<<METHOD:MYNT_URL::getUrl()>>?p=pageLists'><i class='glyphicon glyphicon-arrow-left'></i> Page Lists</a></p>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='col-sm-12'>
+			<div class='base-default base-color-green'>
+				<h1><i class='glyphicon glyphicon-edit'></i> Page Edit</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form name='form1' method='post' class="form-horizontal" action="<<METHOD:MYNT_URL::getUrl()>>">
+	<input type='hidden' name='method' value='MYNT_PAGE_EDIT/setSystemPage' />
+	<input type="hidden" name="p" value="<<REQUEST:p>>">
+	<input type="hidden" name="file" value="<<REQUEST:file>>">
+	<input type="hidden" name="mode" value="">
+
+	<div class='container'>
+		<div class='row'>
+
+			<div class='col-sm-12'>
+				<div class='base-default base-color-gray'>
+
+					<!-- <div class="control-group">
+						<label class="control-label" for="title"><i class='glyphicon glyphicon-text-width'></i> Title</label>
+						<div class="controls">
+							<input type='text' id="title" name='title' value='<<METHOD:MYNT_PAGE_EDIT::getPageInfoString("<<request:file>>","title")>>' class='form-control'/>
+						</div>
+					</div> -->
+
+					<!-- <div class="control-group">
+						<label class="control-label" for="title"><i class='glyphicon glyphicon-eye-open'></i> Eye Catch</label>
+						<div class="controls">
+							<button type="button" class="btn btn-default eyecatch-pickup-cutton" id="eyecatch_add">Pickup Eye-catch</button>
+							<button type="button" class="btn btn-default eyecatch-pickup-cutton" id="eyecatch_del">Remove Eye-catch</button>
+							<div id="eyecatch"><img class='eycatch_img' src='<<METHOD:MYNT_PICTURE::getEyecatchFilePath(<<request:file>>)>>'></div>
+							<input type="hidden" name="eyecatch" value="<<METHOD:MYNT_PAGE_EDIT::getPageInfoString("<<request:file>>","eyecatch")>>">
+						</div>
+					</div> -->
+
+					<div class="control-group dropdown tagControl">
+						<div class="control-label"></div>
+						<div class="controls">
+							<button type="button" class="btn btn-default btn-sm addTag"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> img</button>
+							<button type="button" class="btn btn-default btn-sm addTag"><span class="glyphicon glyphicon-link" aria-hidden="true"></span>a</button>
+
+							&nbsp;
+
+							<div class="btn-group">
+								<button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> paragraph <span class="caret"></span></button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li class="addTag"><span class="btn-style">h2</span></li>
+									<li class="addTag"><span class="btn-style">h3</span></li>
+									<li class="addTag"><span class="btn-style">h4</span></li>
+									<li class="addTag"><span class="btn-style">h5</span></li>
+									<li class="addTag"><span class="btn-style">h6</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">p</span></li>
+									<li class="addTag"><span class="btn-style">blockquote</span></li>
+									<li class="addTag"><span class="btn-style">strong</span></li>
+									<li class="addTag"><span class="btn-style">hr</span></li>
+								</ul>
+							</div>
+
+							<div class="btn-group">
+								<button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> table <span class="caret"></span></button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li class="addTag"><span class="btn-style">table+</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">table</span></li>
+									<li class="addTag"><span class="btn-style">tr</span></li>
+									<li class="addTag"><span class="btn-style">td</span></li>
+									<li class="addTag"><span class="btn-style">th</span></li>
+								</ul>
+							</div>
+
+							<div class="btn-group">
+								<button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> list <span class="caret"></span></button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li class="addTag"><span class="btn-style">ul+</span></li>
+									<li class="addTag"><span class="btn-style">ol+</span></li>
+									<li class="addTag"><span class="btn-style">dl+</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">ul</span></li>
+									<li class="addTag"><span class="btn-style">ol</span></li>
+									<li class="addTag"><span class="btn-style">li</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">dl</span></li>
+									<li class="addTag"><span class="btn-style">dt</span></li>
+									<li class="addTag"><span class="btn-style">dd</span></li>
+								</ul>
+							</div>
+
+							<div class="btn-group">
+								<button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> form <span class="caret"></span></button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+									<li class="addTag"><span class="btn-style">form</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">text</span></li>
+									<li class="addTag"><span class="btn-style">hidden</span></li>
+									<li class="addTag"><span class="btn-style">radio</span></li>
+									<li class="addTag"><span class="btn-style">checkbox</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">select</span></li>
+									<li class="addTag"><span class="btn-style">textarea</span></li>
+									<li role="separator" class="divider"></li>
+									<li class="addTag"><span class="btn-style">button</span></li>
+									<li class="addTag"><span class="btn-style">submit</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="source"><i class='glyphicon glyphicon-edit'></i> Source</label>
+						<div class="controls">
+							<textarea style="min-height:300px;" id="source" name='source' class='form-control' /><<METHOD:MYNT_PAGE_EDIT::getSource("<<REQUEST:file>>")>></textarea>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<div class="control-label"></div>
+						<div class="controls">
+							<input type='submit' value='Update' class='btn btn-default' />
+							<input type='button' value='Preview' class='btn btn-default' />
+							<input type='button' value='Remove' class='btn btn-default' style="display:<<method:MYNT_PAGE_EDIT::setRemoveButton()>>;" />
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- <div class='col-sm-4'>
+				<div class='base-default base-color-gray'>
+
+					<div class="control-group">
+						<label class="control-label" for="status"><i class='glyphicon glyphicon-sort-by-attributes'></i> Status</label>
+						<div class="controls">
+							<select id="status" name="status" class='form-control'/>
+								<<METHOD:MYNT_PAGE_EDIT::getSetatusListsOptions("<<REQUEST:file>>")>>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="schedule"><i class='glyphicon glyphicon-time'></i> Schedule</label>
+						<div class="controls">
+							<input class='form-control' type='datetime-local' id='schedule' name='schedule' value="<<METHOD:MYNT_PAGE_EDIT::getPageInfoString("<<request:file>>","schedule")>>" />
+						</div>
+					</div>
+
+					<div class="control-group" id="fileNameArea">
+						<label class="control-label" for="group"><i class='glyphicon glyphicon-menu-hamburger'></i> Group</label>
+						<div class="controls">
+							<select id="group" name="group" class="form-control">
+								<option value=""></option>
+								<<METHOD:MYNT_PAGE_EDIT::getGroupListsOptions("<<REQUEST:file>>")>>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group" id="fileNameArea">
+						<label class="control-label" for="tag"><i class='glyphicon glyphicon-tags'></i> Tag</label>
+						<div class="controls">
+							<input type='text' id="tag" name='tag' value="<<METHOD:MYNT_PAGE_EDIT::getPageInfoString("<<request:file>>","tag")>>" class='form-control' />
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="source"><i class='glyphicon glyphicon-info-sign'></i> Infomation</label>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<i class='glyphicon glyphicon-open-file'></i> File   : <<if:"<request:file>">> <<METHOD:MYNT_PAGE_EDIT::getType2Dir()>><<request:file>>.html<</if>><br>
+								<i class='glyphicon glyphicon-glass'></i> Regist : <<METHOD:MYNT_PAGE_EDIT::getPageInfoString("<<request:file>>","regist")>><br>
+								<i class='glyphicon glyphicon-time'></i> Update : <<METHOD:MYNT_PAGE_EDIT::getPageInfoString("<<request:file>>","update")>><br>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div> -->
+		</div>
+	</div>
+
+</form>
+
+<script src="system/js/pageEdit.js?<<METHOD:MYNT::currentTime()>>"></script>

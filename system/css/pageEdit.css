@@ -1,0 +1,129 @@
+#pictures{
+	overflow:scroll;
+	text-align:left;
+}
+
+.ImageDialog-bg{
+	position:absolute;
+}
+
+.pictures:hover{
+	border:2px solid #33F;
+	background-color:#33F;
+}
+.pictures[data-active="active"]{
+	/*border:8px solid red;*/
+	border:2px solid red;
+	background-color:red;
+}
+
+.pictures{
+	display:inline-block;
+
+	width :128px;
+	height:128px;
+
+	overflow:hidden;
+	border:2px solid #888;
+	margin:4px;
+	padding:0;
+	background-color:#888;
+	cursor:pointer;
+
+	border-radius:4px;
+	text-align:center;
+}
+
+.pictures .pictures_td{
+	display:table-cell;
+
+	width :128px;
+	height:128px;
+
+	vertical-align:middle;
+}
+
+.pictures .pictures_td img{
+	max-width:100%;
+	max-height:100%;
+	transform: scale(1.2,1.2);
+}
+
+.ImageDialog-bg{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	z-index:10000;
+
+	background-color:rgba(0,0,0,0.7);
+	width:100%;
+	height:100%;
+	/*opacity:0.8;*/
+	text-align:center;
+	padding-top:80px;
+}
+
+.ImageDialog-bg .ImageDialog-area{
+	width:80%;
+	margin:0 auto;
+	background-color:white;
+	border-radius:8px;
+	padding:8px;
+}
+
+.dialogHeader{
+	position:relative;
+	/*text-align:right;*/
+	font-size:24px;
+	height:40px;
+}
+.dialogHeader i{
+	cursor:pointer;
+	color:#666;
+}
+.dialogHeader i:hover{
+	opacity:0.7;
+}
+.dialogHeader .image-pickup-dialog-title{
+	position:absolute;
+	display:inline-block;
+	left:20px;
+}
+.dialogHeader .image-pickup-dialog-close{
+	position:absolute;
+	display:inline-block;
+	right:0;
+}
+
+.addTag .btn-style{
+	display:block;
+
+	padding: 3px 20px;
+	margin:0;
+	border:0;
+	cursor: pointer;
+}
+.addTag .btn-style:hover{
+	background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+button span{
+	pointer-events:none;
+}
+
+/*.tagControl{
+	line-height:36px;
+}
+
+.addTag{
+	line-height:24px;
+}*/
+
+
+.eyecatch-pickup-cutton{
+	margin:8px auto;
+}
+#eyecatch img{
+	max-width:100%;
+}

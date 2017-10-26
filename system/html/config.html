@@ -1,0 +1,74 @@
+<h1>Config</h1>
+
+<!-- <h2>data/config/page.conf</h2> -->
+
+<form method="POST">
+  <input type='hidden' name='method' value='MYNT_CONFIG/setDataUpload' />
+  <input type="hidden" name="p" value="<<REQUEST:p>>" />
+
+<div class='container'>
+    <div class="row">
+
+		<div class="input-group">
+      <span class="input-group-addon">Title</span>
+      <div class="controls">
+        <input class='form-control' type='text' name="page[title]" value='<<METHOD:MYNT_CONFIG::getConfigData("title")>>' />
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <span class="input-group-addon">Version</span>
+      <div class="controls">
+        <input class='form-control' type='text' name="page[version]" value='<<METHOD:MYNT_CONFIG::getConfigData("version")>>' />
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <span class="input-group-addon">Explane</span>
+      <div class="controls">
+        <input class='form-control' type='text' name="page[explane]" value='<<METHOD:MYNT_CONFIG::getConfigData("explane")>>' />
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <span class="input-group-addon">Discription</span>
+      <div class="controls">
+        <input class='form-control' type='text' name="page[discription]" value='<<METHOD:MYNT_CONFIG::getConfigData("discription")>>' />
+      </div>
+    </div>
+
+
+    <div class="input-group">
+      <span class="input-group-addon">Session</span>
+      <div class="controls">
+        <input class='form-control' type='text' name="page[session]" value='<<METHOD:MYNT_CONFIG::getConfigData("session")>>' />
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<hr>
+<div class='container'>
+  <div class="row">
+    <input type='submit' value='Update' class='btn btn-default' />
+  </div>
+</div>
+
+</form>
+
+<style>
+h2{
+  font-size:14px;
+}
+.input-group-addon{
+  font-size:12px;
+   width:160px;
+   text-align:right;
+}
+</style>

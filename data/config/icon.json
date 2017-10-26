@@ -1,0 +1,18 @@
+{
+  "startbootstrap-sb-admin-gh-pages":{
+    "top":"<i class='fa fa-fw fa-hand-o-up'></i>",
+    "folder":"<i class='fa fa-fw fa-folder'></i>",
+    "book":"<i class='fa fa-fw fa-book'></i>"
+  },
+  "startbootstrap-4-col-portfolio-gh-pages":{
+    "top":"<img src='lib/img/icon/svg/if_arrow-up-80px_510933.svg' class='book-list-icon'>",
+    "folder":"<img src='lib/img/icon/svg/if_icon-ios7-folder_211749.svg' class='book-list-icon'>",
+    "book":"<img src='lib/img/icon/svg/if_book_text_103408.svg' class='book-list-icon'>"
+  },
+  "bootstrap-icon":{
+    "top":"glyphicon glyphicon-open",
+    "folder":"glyphicon glyphicon-folder-open",
+    "book":"glyphicon glyphicon-book"
+  }
+
+}

@@ -1,0 +1,40 @@
+<h1>Design</h1>
+
+<form method="POST">
+  <input type='hidden' name='method' value='MYNT_DESIGN/setDataUpload' />
+	<input type="hidden" name="p" value="<<REQUEST:p>>" />
+
+<div class='container'>
+  <div class="row">
+    <div class="CONTROL-group">
+      <div class="controls">
+        <select name="design[target]">
+          <<method:MYNT_DESIGN::viewDesignLists("")>>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<hr>
+<div class='container'>
+  <div class="row">
+    <input type='submit' value='Update' class='btn btn-default' />
+  </div>
+</div>
+
+</form>
+
+<style>
+h2{
+  font-size:14px;
+}
+.input-group-addon{
+  font-size:12px;
+   width:160px;
+   text-align:right;
+}
+
+</style>

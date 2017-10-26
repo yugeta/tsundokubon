@@ -1,0 +1,126 @@
+html,body{
+	height:100%;
+}
+
+div.navbar,div.navbar-inverse,div.navbar-dash{
+	margin-bottom:0 !important;
+}
+
+/*<<bootstrap-hack*/
+
+div.navbar-inner{
+	border-radius:0;
+	-webkit-border-radius:0;
+	border:0;
+	/*
+	background:none;
+	background-image:none !important;
+	background-color:#FED !important;
+	*/
+}
+
+/*
+a.btn-navbar{
+	background-color:#FED !important;
+}
+*/
+/*bootstrap-hack>>*/
+
+/*index*/
+.index-word{
+	max-width:1200px;
+	margin:0 20px;
+	/*position:absolute;*/
+
+	top:30px;
+	left:30px;
+	font-weight:bold;
+	font-size:16px;
+	/*color:white;*/
+	line-height:30px;
+
+
+}
+
+/*torisetsu*/
+img.items{
+	max-width:96%;
+	height:auto;
+	display:block;
+}
+
+/*index*/
+
+table.lists{
+	margin:20px;
+}
+table.lists th,table.lists td{
+	min-width:100px;
+	border:1px solid #AAA;
+	padding:2px 4px;
+}
+table.lists th{
+	background-color:#EEE;
+}
+table.lists td{
+	text-align:right;
+}
+
+.record-line{
+	margin-bottom:10px;
+}
+
+.img-thumb{
+	max-width:80%;
+	margin:4px auto;
+	display:block;
+}
+.img-control{
+	border:1px solid #CCC;
+	border-radius:4px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.img-control input{
+	width:94%;
+	margin:4px auto;
+	display:block;
+}
+.input-group{
+	margin-bottom:10px;
+}
+
+.items-line{
+	border:1px solid #CCC;
+	border-radius:4px;
+	margin:20px 10px;
+	padding:10px;
+}
+.page-title{
+	font-size:30px;
+	font-weight:bold;
+	position:relative;
+}
+.page-title .btn{
+	position:absolute;
+	right:10px;
+	bottom:0;
+}
+.new-button{
+	/*line-height:63px;*/
+	text-align:right;
+	padding-top:10px;
+}
+/*
+.input-group select.form-control{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+*/
+.maintenance{
+	padding:0 10px;
+}
+.manual-line{
+	border-bottom:1px solid #CCC;
+	margin-bottom:10px;
+}

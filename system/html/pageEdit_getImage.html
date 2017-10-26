@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="<<METHOD:MYNT_URL::getSystemRoot()>>css/picture.css">
+<iframe id='img_upload_iframe' style="display:none;"></iframe>
+
+<div class="ImageDialog-area">
+
+	<div class="dialogHeader">
+		<input type="hidden" id="eyecatch_mode" value="<<request:mode>>" />
+		<input type="hidden" id="eyecatch_file" value="<<request:selectImage>>" />
+		<div class="image-pickup-dialog-title"><<if:"<<request:mode>>"==="eyecatch">>Eye-Catch<<else>>Image-Tag<</if>></div>
+		<div class="image-pickup-dialog-close"><i class="glyphicon glyphicon-remove-circle" id="closeDialog"></i></div>
+	</div>
+
+	<nav class="navbar navbar-default">
+
+	  <div class="container-fluid">
+
+			<div class="navbar-form navbar-left">
+				<div class="input-group">
+				  <!-- <input type="file" class="form-control">
+				  <span class="input-group-addon" id="basic-addon2">Upload</span> -->
+					<button id="button_upload" type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Image File Upload
+					</button>
+				</div>
+
+				<div class="navbar-header navbar-right">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+
+			</div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+	      <form class="navbar-form navbar-right">
+	        <div class="form-group ">
+					<div class="input-group">
+					  <input type="text" class="form-control">
+					  <span class="input-group-addon" id="basic-addon2">Search</span>
+					</div>
+	      </form>
+
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="pictures"></div>
+
+</div>
+
+<!-- <script src="system/js/picture.js?<<MYNT::currentTime()>>"></script> -->

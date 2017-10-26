@@ -1,0 +1,11 @@
+main{
+  background-color:#EEE;
+}
+
+.debug pre{
+  border:1px solid #DDD;
+  background-color:white;
+  padding:8px;
+  font-size:12px;
+  line-height:16px;
+}

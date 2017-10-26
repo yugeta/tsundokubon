@@ -1,0 +1,50 @@
+<h1>Plugins</h1>
+
+<!-- <h2>data/config/plugin.conf</h2> -->
+
+<form method="POST">
+  <input type='hidden' name='method' value='MYNT_PLUGIN/setDataUpload' />
+  <input type="hidden" name="p" value="<<REQUEST:p>>" />
+
+<div class='container'>
+  <div class="row">
+    <div class="CONTROL-group">
+      <div class="controls">
+        <<method:MYNT_PLUGIN::viewPluginLists()>>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<hr>
+<div class='container'>
+  <div class="row">
+    <input type='submit' value='Update' class='btn btn-default' />
+  </div>
+</div>
+
+</form>
+
+<style>
+h2{
+  font-size:14px;
+}
+.input-group-addon{
+  font-size:12px;
+   width:160px;
+   text-align:right;
+}
+label.plugin-lists{
+  display:block;
+  font-weight:normal;
+  cursor:pointer;
+}
+label.plugin-lists:hover{
+  font-weight:bold;
+}
+span.plugin-explane{
+  color:#88C;
+}
+</style>

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="system/css/login.css?<<METHOD:MYNT::currentTime()>>">
+
+<main class="bs-docs-masthead" role="main">
+	<form method="post">
+		<input type="hidden" name="method" value="MYNT/checkLogin">
+		<div class="login">
+			<div class="input-area">
+				<div class="input-group">
+					<span class="input-group-addon">ID</span>
+					<input class="form-control" type="text" name="login_id" value="<<REQUEST:login_id>>" autocomplete="off">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">Password</span>
+					<input class="form-control" type="password" name="login_pw" value="<<REQUEST:login_pw>>" autocomplete="off">
+				</div>
+				<div class="login-submit">
+					<button class="btn btn-default"><span>Login</span></button>
+				</div>
+			</div>
+		</div>
+	</form>
+</main>

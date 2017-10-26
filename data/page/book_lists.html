@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="data/page/css/bookLists.css?<<globals:config/default/version>>">
+
+<h1>Book-Lists</h1>
+
+<div class="pankuzu">
+<<METHOD:BOOK_COMMON::getPankuzu(<<REQUEST:dir>>)>>
+</div>
+
+<div class="dir-in">
+<<METHOD:BOOK_COMMON::getBookLists(<<REQUEST:dir>>)>>
+</div>
+
+<div class="debug">
+  <label>
+    <input type="checkbox" id="debugBtn" />Debug(チェックしていると書籍アーカイブの内容リストが表示されます)
+  </label>
+</div>
+
+<script src="data/page/js/bookLists.js?<<globals:config/default/version>>"></script>

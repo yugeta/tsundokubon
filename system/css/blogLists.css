@@ -1,0 +1,32 @@
+.titleList:hover{
+  cursor:pointer;
+  background-color:#EEE;
+}
+.pageListTypeList{
+	padding:0;
+}
+.pageListTypeList , .pageListTypeList *{
+	background-color:white;
+}
+.pageListTypeList li{
+	border-bottom:1px solid #CCC;
+	height:40px;
+	line-height:40px;
+}
+.pageListTypeList li a{
+	background-color:transparent;
+	height:40px;
+	line-height:40px;
+}
+
+.string-blue{
+	color:blue;
+}
+
+.table-scroll{
+	overflow:auto;
+}
+.table-scroll td,
+.table-scroll th{
+  white-space:nowrap;
+}

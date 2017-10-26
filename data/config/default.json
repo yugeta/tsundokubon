@@ -1,0 +1,9 @@
+{
+    "title": "ツンドクボン",
+    "version": "0.0.11",
+    "explane": "MYNT STUDIO base system modules",
+    "discription": "discription-string",
+    "session": "MyntStudio-tech-tsundokubon",
+    "path-top":"data/page/top.html",
+    "update": "20170928172757"
+}

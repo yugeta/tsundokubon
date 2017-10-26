@@ -1,0 +1,15 @@
+
+table.tokutei{
+  margin: 20px auto;
+  min-width:300px;
+}
+
+table.tokutei th , table.tokutei td{
+  border:1px solid #CCC;
+  padding:4px;
+}
+table.tokutei th{
+  font-size:12px;
+  width:120px;
+  background-color:#EEE;
+}

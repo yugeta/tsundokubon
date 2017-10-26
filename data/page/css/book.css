@@ -1,0 +1,229 @@
+img.view-page{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  /*object-fit: contain;*/
+}
+div.page-img{
+  /*display:block;
+  max-width:auto;
+  max-height:95%;
+  width:auto;
+  height:auto;*/
+  /*object-fit: contain;*/
+}
+
+div.book-btn{
+  z-index : 20;
+  /*font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;*/
+  position : fixed;
+  display : block;
+  width : 50px;
+  height : 50px;
+  /*background-color:black;*/
+  /*opacity:0.6;*/
+  border-radius : 25px;
+  text-align : center;
+  vertical-align : middle;
+  line-height : 45px;
+  font-size : 50px;
+  font-weight : bold;
+  color   : white;
+  cursor  : pointer;
+  padding : 0;
+  margin  : 0;
+  border  : 0;
+}
+/*div.book-btn:hover{
+  opacity:0.3 !important;
+}*/
+
+
+div.book-btn-right{
+  right  : 0;
+  bottom : 0;
+}
+div.book-btn-right:before{
+  /*filter: invert(1);*/
+  /*content:">";*/
+  content:url('../../../lib/img/Navigation Set - Arrows, Part One/SVG/32/1031536 - arrow ar.svg');
+  text-align:right;
+}
+
+
+div.book-btn-left{
+  left   : 0;
+  bottom : 0;
+}
+div.book-btn-left:before{
+  /*filter: invert(1);*/
+  content:url('../../../lib/img/Navigation Set - Arrows, Part One/SVG/32/1031537 - arrow ar.svg');
+}
+
+div.book-btn-firstpage{
+  left   : 15%;
+  bottom : 0;
+}
+div.book-btn-firstpage:before{
+  /*filter: invert(1);*/
+  content:url('../../../lib/img/Navigation Set - Arrows, Part One/SVG/32/1031517 - before f.svg');
+}
+
+div.book-btn-lastpage{
+  left   : 25%;
+  bottom : 0;
+}
+div.book-btn-lastpage:before{
+  /*filter: invert(1);*/
+  content:url('../../../lib/img/Navigation Set - Arrows, Part One/SVG/32/1031513 - last las.svg');
+}
+
+
+div.book-btn2{
+  z-index : 20;
+  /*font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;*/
+  position:fixed;
+  display:block;
+  width : 30px;
+  height: 30px;
+  /*background-color:black;*/
+  /*opacity:0.6;*/
+  /*border-radius:25px;*/
+  text-align:center;
+  vertical-align:middle;
+  /*line-height:45px;
+  font-size:50px;*/
+  font-weight:bold;
+  color:white;
+  cursor:pointer;
+  padding:0;
+  margin:0;
+  border:0;
+  /*background-color:rgba(255,255,255,0.5);*/
+}
+
+div.book-btn-close{
+  right : 25%;
+  bottom: 10px;
+}
+div.book-btn-close:before{
+  content:url('../../../lib/img/Evil Icons User Interface/SVG/64/1814098 - close no reject.svg');
+}
+
+div.book-btn-comment{
+  right : 15%;
+  bottom: 10px;
+}
+div.book-btn-comment:before{
+  content:url('../../../lib/img/Evil Icons User Interface/SVG/64/1814099 - chat cloud speec.svg');
+}
+
+
+
+.content-wrapper{
+  width:100%;
+  height:100%;
+  overflow:visible;
+  text-align:center;
+  position:relative;
+  padding:0 !important;
+}
+/*.page-img{
+  display:inline-block;
+}*/
+img.view-page{
+  box-shadow:4px 4px 16px rgba(0,0,0,0.5);
+}
+.page-info{
+  display:block;
+  width:200px;
+  margin:0 auto;
+
+  line-height:40px;
+  /*position:fixed;*/
+  bottom:0;
+  /*width:100%;*/
+  text-align:center;
+
+}
+
+.book-info{
+  display:block;
+  width:20%;
+  margin:0 auto;
+  position:fixed;
+  /*position:static !important;*/
+
+  z-index:10;
+  /*border:1px solid black;*/
+  color:black;
+  text-align:center;
+  /*position:absolute;*/
+  bottom:0;
+  left:40%;
+  /*width:100%;*/
+  height:50px;
+  line-height:50px;
+  /*pointer-events:none;*/
+  /*border:1px solid red;*/
+  white-space:nowrap;
+  overflow:visible;
+}
+
+.book-comment{
+  display:none;
+  position:absolute;
+  width:80%;
+  /*height:240px;*/
+  /*background-image:url("../../../lib/img/Evil Icons User Interface/SVG/64/1814099 - chat cloud speec.svg");*/
+  top:60px;
+  left:50px;
+  /*background-color:rgba(255,255,255,0.7);*/
+  background-color:#CCC;
+  border:2px solid black;
+  border-radius:8px;
+  opacity:0.8;
+
+}
+.book-comment textarea{
+  width:100%;
+  height:200px;
+  border:1px solid #BBB;
+  border-radius:8px;
+  resize: none;
+  padding:8px;
+  background-color:white;
+}
+.book-comment button{
+  width:90%;
+  margin:4px;
+  background-color:#AAA;
+  /*position:absolute;
+  right:8px;
+  bottom:8px;*/
+}
+
+
+/* @media */
+footer{
+  display: none !important;
+}
+@media screen and (max-width: 500px){
+  /*div.book-btn:hover{
+    opacity:1 !important;
+  }*/
+  nav,footer{
+    display: none !important;
+  }
+  body{
+    padding:0 !important;
+    margin:0 !important;
+  }
+  /*div.book-btn-close{
+    top: 0px;
+  }
+  div.book-btn-comment{
+    top: 40px;
+  }*/
+}
